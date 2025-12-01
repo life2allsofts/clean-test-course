@@ -319,3 +319,4 @@ Security testing is implemented in the `frontend` directory using [ZAP](https://
 All of the tests are automated into the CI/CD pipeline using [GitHub Actions](https://github.com/features/actions). GitHub Actions are defined in this repository in the `.github/workflows` folder. Feel free to view the automated runs under the [Actions](https://github.com/quasifu/quantic-test-course/actions) tab of this repository.
 
 &copy; 2022 Quantic School of Business and Technology
+ 
