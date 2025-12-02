@@ -35,9 +35,11 @@ describe('Test Order', () => {
         <Order />
       </OrderContext.Provider>
     );
-    //Assert: replace the return true.
+    
+    //Assert: Verify that the delivery fee shows up as $2.50
     await waitFor(() => {
-      return true;
+      const deliveryFeeElement = screen.getByText('Delivery Fee').nextElementSibling;
+      expect(deliveryFeeElement).toHaveTextContent('$2.50');
     });
   });
 
@@ -61,9 +63,11 @@ describe('Test Order', () => {
       // Find and select the 5 mile option, like a real user would.
       screen.getByRole('option', { name: '5 miles' })
     );
-    //Assert: replace the return true.
+    
+    //Assert: Verify that the delivery fee updates to $5.00
     await waitFor(() => {
-      return true;
+      const deliveryFeeElement = screen.getByText('Delivery Fee').nextElementSibling;
+      expect(deliveryFeeElement).toHaveTextContent('$5.00');
     });
   });
 });
